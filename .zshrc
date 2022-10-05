@@ -107,6 +107,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias projects="cd ~/Documents/developpment/projects"
 alias tutorials="cd ~/Documents/developpment/tutorials"
 alias dotfiles="cd ~/.dotfiles/"
+alias home="cd ~/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
