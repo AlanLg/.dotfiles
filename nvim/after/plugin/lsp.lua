@@ -7,3 +7,12 @@ require'lspconfig'.quick_lint_js.setup{
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer= 0})
     end,
 }
+
+
+
+require'lspconfig'.luau_lsp.setup{
+    capabilities = capabilities,
+    on_attatch = function()
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer= 0})
+    end,
+}

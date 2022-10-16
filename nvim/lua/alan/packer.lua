@@ -10,7 +10,8 @@ return require ('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'nvim-telescope/telescope.nvim'
     use 'sbdchd/neoformat'
-
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'nvim-lua/plenary.nvim'
     -- lsp autocomplete
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
