@@ -121,11 +121,6 @@ alias projects="cd ~/Documents/developpment/projects"
 alias tutorials="cd ~/Documents/developpment/tutorials"
 alias dotfiles="cd ~/.dotfiles/"
 alias home="cd ~/"
-# Taken from the tmux plugin
-alias ta="tmux attach -t"
-alias ts="tmux new-session -s"
-alias tl="tmux list-sessions"
-
 function acp() {
     git add .
     git commit -m "$1"
