@@ -73,6 +73,19 @@ plugins=(git sudo npm node zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+
+
+setopt hist_ignore_all_dups # remove older duplicate entries from history
+setopt hist_reduce_blanks # remove superfluous blanks from history items
+setopt inc_append_history # save history entries as soon as they are entered
+setopt share_history # share history between different instances of the shell
+setopt auto_cd # cd by typing directory name if it's not a command
+setopt correct_all # autocorrect commands
+setopt auto_list # automatically list choices on ambiguous completion
+setopt auto_menu # automatically use menu completion
+setopt always_to_end # move cursor to end if word had one match
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -108,7 +121,18 @@ alias projects="cd ~/Documents/developpment/projects"
 alias tutorials="cd ~/Documents/developpment/tutorials"
 alias dotfiles="cd ~/.dotfiles/"
 alias home="cd ~/"
+# Taken from the tmux plugin
+alias ta="tmux attach -t"
+alias ts="tmux new-session -s"
+alias tl="tmux list-sessions"
+
+function acp() {
+    git add .
+    git commit -m "$1"
+    git push
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias luamake=/luamake
