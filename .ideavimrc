@@ -1,3 +1,5 @@
+
+
 "" Base Settings
 "" ========================================================
 
@@ -6,6 +8,7 @@ set relativenumber
 set showmode
 set showcmd
 
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -13,7 +16,7 @@ set hlsearch
 set visualbell
 
 " Use system clipboard
-" set clipboard+=unnamed
+set clipboard+=unnamed
 
 let mapleader = " "
 
@@ -23,14 +26,10 @@ let mapleader = " "
 
 set surround
 set highlightedyank
-set sneak
 set nerdtree
 
-" Easymotion settings
-set easymotion
-set notimeout
-
 " Which-key settings
+set notimeout
 set which-key
 let g:WhichKey_FontSize = 16
 let g:WhichKey_CommandColor = "#41ead4"
@@ -40,9 +39,6 @@ let g:WhichKey_SortOrder = "by_key_prefix_first"
 let g:WhichKeyDesc_leader = "<leader> Leader key"
 
 let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
-
-let g:WhichKeyDesc_easymotion = "<leader>j Jump with Easymotion"
-let g:WhichKeyDesc_easymotion_prefix = "<leader><leader>"
 
 let g:WhichKeyDesc_comment = "<leader>c Comment line"
 
@@ -138,19 +134,16 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" ========================================================
 
 " system clipboard
-vmap <leader>y "+y
-vmap <leader>d "+d
-nmap <leader>y "+yy
-nmap <leader>p "+p
-nmap <leader>P "+P
-vmap <leader>p "+p
-vmap <leader>P "+P
+" vmap <leader>y "+y
+" vmap <leader>d "+d
+" nmap <leader>y "+yy
+" nmap <leader>p "+p
+" nmap <leader>P "+P
+" vmap <leader>p "+p
+" vmap <leader>P "+P
 
 " Comment lines
 map <leader>c <action>(CommentByLineComment)
-
-" Jump around with easymotion
-map <leader>j <Plug>(easymotion-s)
 
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
@@ -210,4 +203,5 @@ map <leader>gb <Action>(Git.Branches)
 " Errors
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+
 
