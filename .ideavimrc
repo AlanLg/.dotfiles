@@ -45,6 +45,7 @@ nnoremap <c-/> :action FindInPath<CR>
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action ShowUsages<CR>
 nnoremap <leader>d :action QuickJavaDoc<CR>
+nnoremap <leader>p :action SelectInProjectView<CR>
 
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap gc :action GotoClass<CR>
@@ -52,4 +53,5 @@ nnoremap gp :action GotToSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+
 
