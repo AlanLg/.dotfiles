@@ -1,52 +1,55 @@
-
-"" Base Settings
+"" base settings
 "" ========================================================
 
 set scrolloff=10
-set number
 set relativenumber
 set showmode
 set showcmd
-
+set number
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
-
 set visualbell
 
-" Use system clipboard
+" use system clipboard
 set clipboard+=unnamed
 
 let mapleader = " "
 
-
-"" Plugin Settings
+"" plugin settings
 "" ========================================================
 
 set surround
 set highlightedyank
 set nerdtree
 
-"" Key mappings
-"" ========================================================
-
-nnoremap <c-u> <c-u>zz
-nnoremap <c-d> <c-d>zz
+" which-key settings
+set notimeout
+set which-key
+let g:whichkey_fontsize = 16
+let g:whichkey_commandcolor = "#41ead4"
+let g:whichkey_prefixcolor = "#f335b2"
+let g:whichkey_sortorder = "by_key_prefix_first"
+let g:whichkeyDesc_leader = "<leader> leader key"
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <Leader>t :action Terminal.OpenInTerminal<CR>
-nnoremap <Leader>c :action CommentByLineComment<CR>
-vnoremap <Leader>c :action CommentByLineComment<CR>
-nnoremap <Leader>o :action OptimizeImports<CR>
-nnoremap <Leader><Leader> :action RecentFiles<CR>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>c :action CommentByLineComment<CR>
+vnoremap <leader>c :action CommentByLineComment<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
+nnoremap <leader><leader> :action RecentFiles<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
+
 nnoremap <c-/> :action FindInPath<CR>
 nnoremap <c-f> :action GotoFile<CR>
-nnoremap <Leader>u :action FindUsages<CR>
-nnoremap <Leader>s :action GotoRelated<CR>
+nnoremap <leader>u :action ShowUsages<CR>
+nnoremap <leader>d :action QuickJavaDoc<CR>
+
+nnoremap <leader>s :action GotoRelated<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap gp :action GotToSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+
