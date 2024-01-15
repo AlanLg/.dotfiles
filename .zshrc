@@ -127,11 +127,21 @@ function acp() {
     git push
 }
 
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias luamake=/luamake
 # add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
+export PATH=$PATH:$HOME/.scripts
 export EDITOR="/usr/bin/nvim"
 export PATH=$HOME/.config/rofi/scripts:$PATH
+export PATH=$PATH:/usr/local/go/bin
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.cargo/env"
