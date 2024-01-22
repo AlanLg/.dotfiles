@@ -108,18 +108,12 @@ setopt always_to_end # move cursor to end if word had one match
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python="python3.11"
-alias hotkeys="cat ~/Documents/developpment/tutorial/hotkeys/hotkeys.txt"
-alias edithotkeys="vim ~/Documents/developpment/tutorial/hotkeys/hotkeys.txt"
 alias reload="source ~/.zshrc"
 alias vim="nvim"
-alias i3config="nvim ~/.config/i3/config"
 alias myip="curl http://ipecho.net/plain; echo"
 alias projects="cd ~/Documents/developpment/projects"
-alias tutorials="cd ~/Documents/developpment/tutorials"
 alias dotfiles="cd ~/.dotfiles/"
 alias home="cd ~/"
-alias tools="cd ~/Documents/tools/"
 alias pwdc="pwd | xclip -selection clipboard"
 function acp() {
     git add .
@@ -133,12 +127,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias luamake=/luamake
-# add Pulumi to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
+
 export PATH=$PATH:$HOME/.scripts
 export EDITOR="/usr/bin/nvim"
-export PATH=$HOME/.config/rofi/scripts:$PATH
 export PATH=$PATH:/usr/local/go/bin
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
