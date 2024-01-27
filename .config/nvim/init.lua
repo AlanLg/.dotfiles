@@ -401,6 +401,14 @@ vim.defer_fn(function()
     -- Add languages to be installed here that you want installed for treesitter
     ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'java' },
 
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+
+    -- List of parsers to ignore installing (or "all")
+    ignore_install = {},
+
+    modules = {},
+
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = true,
 
@@ -547,9 +555,31 @@ local servers = {
   },
   -- pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  -- tsserver = {
+  --   javascript = {
+  --     inlayHints = {
+  --       includeInlayEnumMemberValueHints = true,
+  --       includeInlayFunctionLikeReturnTypeHints = true,
+  --       includeInlayFunctionParameterTypeHints = true,
+  --       includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+  --       includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+  --       includeInlayPropertyDeclarationTypeHints = true,
+  --       includeInlayVariableTypeHints = true,
+  --     },
+  --   },
+  --   typescript = {
+  --     inlayHints = {
+  --       includeInlayEnumMemberValueHints = true,
+  --       includeInlayFunctionLikeReturnTypeHints = true,
+  --       includeInlayFunctionParameterTypeHints = true,
+  --       includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+  --       includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+  --       includeInlayPropertyDeclarationTypeHints = true,
+  --       includeInlayVariableTypeHints = true,
+  --     },
+  --   },
+  -- },
   -- html = { filetypes = { 'html', 'twig', 'hbs' } },
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
