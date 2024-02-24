@@ -32,19 +32,31 @@ let g:whichkey_commandcolor = "#41ead4"
 let g:whichkey_prefixcolor = "#f335b2"
 let g:whichkey_sortorder = "by_key_prefix_first"
 let g:whichkeyDesc_leader = "<leader> leader key"
+
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+
 nnoremap <leader>c :action CommentByLineComment<CR>
 vnoremap <leader>c :action CommentByLineComment<CR>
+
 nnoremap <leader>o :action OptimizeImports<CR>
+
+nnoremap <leader>sf :action GotoFile<CR>
+nnoremap <leader>? :action RecentChangedFiles<CR>
 nnoremap <leader><leader> :action RecentFiles<CR>
+nnoremap <leader>ss :action SearchEverywhere<CR>
+nnoremap <leader>s/ :action RecentFiles<CR>
+nnoremap <c-/> :action FindInPath<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+
+"" nnoremap <leader>ca :action ShowIntentionActions<CR>
+
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
-nnoremap <c-/> :action FindInPath<CR>
 nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action ShowUsages<CR>
-nnoremap <leader>d :action QuickJavaDoc<CR>
+nnoremap K :action QuickJavaDoc<CR>
 nnoremap <leader>p :action SelectInProjectView<CR>
 
 nnoremap <leader>s :action GotoRelated<CR>
@@ -53,5 +65,7 @@ nnoremap gp :action GotToSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
+nnoremap gI :action GotoImplementation<CR>
+
 
 
