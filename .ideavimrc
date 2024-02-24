@@ -27,11 +27,34 @@ set nerdtree
 " which-key settings
 set notimeout
 set which-key
-let g:whichkey_fontsize = 16
+let g:whichkey_fontsize = 40
+let g:WhichKey_DefaultDelay = 600
 let g:whichkey_commandcolor = "#41ead4"
 let g:whichkey_prefixcolor = "#f335b2"
 let g:whichkey_sortorder = "by_key_prefix_first"
+let g:WhichKey_ShowVimActions = "true"
 let g:whichkeyDesc_leader = "<leader> leader key"
+let g:WhichKeyDesc_terminal      = "<leader>t  Activate Terminal Tool Window"
+let g:WhichKeyDesc_comment       = "<leader>c  Comment by Line Comment"
+let g:WhichKeyDesc_optimize      = "<leader>o  Optimize Imports"
+let g:WhichKeyDesc_goto_file     = "<leader>sf Go to File"
+let g:WhichKeyDesc_recent_files  = "<leader><leader> Recent Files"
+let g:WhichKeyDesc_search        = "<leader>ss Search Everywhere"
+let g:WhichKeyDesc_find_in_path  = "<c-/>     Find in Path"
+let g:WhichKeyDesc_rename        = "<leader>rn Rename Element"
+let g:WhichKeyDesc_next_error    = "ge        Go to Next Error"
+let g:WhichKeyDesc_prev_error    = "gE        Go to Previous Error"
+let g:WhichKeyDesc_go_to_file    = "<c-f>     Go to File"
+let g:WhichKeyDesc_show_usages   = "<leader>u Show Usages"
+let g:WhichKeyDesc_quick_javadoc = "K         Quick JavaDoc"
+let g:WhichKeyDesc_project_view  = "<leader>p Select in Project View"
+let g:WhichKeyDesc_related       = "<leader>s Go to Related"
+let g:WhichKeyDesc_go_to_class   = "gc        Go to Class"
+let g:WhichKeyDesc_super_method  = "gp        Go to Super Method"
+let g:WhichKeyDesc_go_to_test    = "gt        Go to Test"
+let g:WhichKeyDesc_back          = "gb        Back"
+let g:WhichKeyDesc_forward       = "gf        Forward"
+let g:WhichKeyDesc_implementation= "gI        Go to Implementation"
 
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
@@ -66,6 +89,4 @@ nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 nnoremap gI :action GotoImplementation<CR>
-
-
 
