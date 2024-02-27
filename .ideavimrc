@@ -68,6 +68,7 @@ nnoremap <leader>sf :action GotoFile<CR>
 nnoremap <leader>? :action RecentChangedFiles<CR>
 nnoremap <leader><leader> :action RecentFiles<CR>
 nnoremap <leader>ss :action SearchEverywhere<CR>
+nnoremap <leader>sg :action FindInPath<CR>
 nnoremap <leader>s/ :action RecentFiles<CR>
 nnoremap <c-/> :action FindInPath<CR>
 nnoremap <leader>rn :action RenameElement<CR>
@@ -89,4 +90,3 @@ nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 nnoremap gI :action GotoImplementation<CR>
-
