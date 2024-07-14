@@ -16,6 +16,7 @@ alias projects="cd ~/Documents/developpment/projects"
 alias dotfiles="cd ~/.dotfiles/"
 alias home="cd ~/"
 alias pwdc="pwd | xclip -selection clipboard"
+alias compiler="cmake -S ./ -B ./cmake-build-debug -DCMAKE_BUILD_TYPE=Debug && cd cmake-build-debug/ && make && ./compiler ; cd .."
 function acp() {
     git add .
     git commit -m "$1"
@@ -27,6 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/go/bin/
+export PATH=$PATH:$HOME/.local/bin
 export EDITOR="/usr/bin/nvim"
 export PATH=$PATH:/usr/local/go/bin
 export SDKMAN_DIR="$HOME/.sdkman"
