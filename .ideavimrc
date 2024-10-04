@@ -14,6 +14,7 @@ set visualbell
 
 " use system clipboard
 set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 let mapleader = " "
 
@@ -40,6 +41,7 @@ let g:WhichKeyDesc_optimize      = "<leader>o  Optimize Imports"
 let g:WhichKeyDesc_goto_file     = "<leader>sf Go to File"
 let g:WhichKeyDesc_recent_files  = "<leader><leader> Recent Files"
 let g:WhichKeyDesc_search        = "<leader>ss Search Everywhere"
+let g:WhichKeyDesc_parameter_info = "<leader>sp Show Function Parameters"
 let g:WhichKeyDesc_find_in_path  = "<c-/>     Find in Path"
 let g:WhichKeyDesc_rename        = "<leader>rn Rename Element"
 let g:WhichKeyDesc_next_error    = "ge        Go to Next Error"
@@ -64,6 +66,7 @@ vnoremap <leader>c :action CommentByLineComment<CR>
 
 nnoremap <leader>o :action OptimizeImports<CR>
 
+nnoremap <leader>sp :action ParameterInfo<CR>
 nnoremap <leader>sf :action GotoFile<CR>
 nnoremap <leader>? :action RecentChangedFiles<CR>
 nnoremap <leader><leader> :action RecentFiles<CR>
@@ -90,3 +93,5 @@ nnoremap gt :action GotoTest<CR>
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 nnoremap gI :action GotoImplementation<CR>
+
+
